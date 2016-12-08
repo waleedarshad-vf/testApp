@@ -38,8 +38,11 @@ group :development, :test do
   gem 'byebug'
   gem 'cucumber'
   gem 'capybara'
+  gem "cucumber-rails"
   gem 'selenium-webdriver'
   gem 'devise'
+  gem 'rspec'
+  gem 'rspec-rails'
 end
 
 group :development do

@@ -36,13 +36,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'cucumber'
   gem 'capybara'
-  gem "cucumber-rails"
+  gem 'poltergeist'
   gem 'selenium-webdriver'
-  gem 'devise'
+  gem 'cucumber'
   gem 'rspec'
-  gem 'rspec-rails'
+  gem "chromedriver-helper"
 end
 
 group :development do

@@ -1,12 +1,23 @@
+require 'capybara'
 Given(/^Initiating browser$/) do
-  visit 'https://www.yelp.com/'
+  if ENV['BROWSER'] == "ff"
+    Capybara.register_driver :selenium do |app|
+      Capybara::Selenium::Driver.new(app, :browser => :firefox )
+    end
+
+
+  else
+    Capybara.register_driver :selenium do |app|
+      Capybara::Selenium::Driver.new(app, :browser => :chrome )
+    end
+  end
 end
 Given(/^Hit Site https:\/\/www\.yelp\.com$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit 'https://www.yelp.com/'
 end
 
 When(/^Enter restaurant name to Search$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in(with: 'Restaurants', id: 'find_desc')
 end
 
 When(/^Click on Search icon$/) do

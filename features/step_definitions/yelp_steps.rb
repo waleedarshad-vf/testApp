@@ -21,11 +21,11 @@ When(/^Enter restaurant name to Search$/) do
 end
 
 When(/^Click on Search icon$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_button 'header-search-submit'
 end
 
 Then(/^Displaying Filtered Restaurant list$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_button '.all-filters-toggle'
 end
 
 When(/^Append pizza with restuarant in the search field$/) do

@@ -32,6 +32,9 @@ module Pages
     def click_yelp_button ele
       click_button ele
     end
+    def click_element ele
+      find(ele).click
+    end
     def find_yelp_element ele
       sleep(20)
       find(ele)

@@ -25,15 +25,16 @@ When(/^Click on Search icon$/) do
 end
 
 Then(/^Displaying Filtered Restaurant list$/) do
-  click_button '.all-filters-toggle'
+  find('.all-filters-toggle').click
+  
 end
 
 When(/^Append pizza with restuarant in the search field$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in(with: 'pizza restaurants', id: 'find_desc')
 end
 
 When(/^Click on Search icon again$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  find('.all-filters-toggle').click
 end
 
 Then(/^Compare Results of restaurants and restaurants pizza$/) do
